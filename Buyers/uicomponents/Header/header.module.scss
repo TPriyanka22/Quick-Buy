@@ -1,0 +1,103 @@
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import QuickbuySearchIcon from "@/icons/quickbuy-search";
+import QuickbuyCartIcon from "@/icons/quickbuy-cart";
+import QuickbuyProfileIcon from "@/icons/quickbuy-profile";
+import QuickbuyArrowIcon from "@/icons/quickbuy-arrow";
+import "@/styles/globals.css";
+const QuickbuyHeader = () => {
+const [showMenu, setShowMenu] = useState(false);
+const router = useRouter();
+const toggleMenu = () => {
+setShowMenu(!showMenu);
+};
+return (
+<header className="quickbuy-header">
+<div className="quickbuy-header-container">
+<div className="quickbuy-logo-container">
+<Link href="/">
+<a className="quickbuy-logo">Quickbuy</a>
+</Link>
+</div>
+    <div className="quickbuy-search-container">
+      <QuickbuySearchIcon className="quickbuy-search-icon" />
+      <form>
+        <input
+          type="text"
+          placeholder="Search for products..."
+          className="quickbuy-search-input"
+        />
+      </form>
+    </div>
+
+    <div className="quickbuy-right-content">
+      <div className="quickbuy-cart-container">
+        <QuickbuyCartIcon className="quickbuy-cart-icon" />
+        <span>Cart</span>
+      </div>
+
+      <div className="quickbuy-profile-container">
+        <img
+          src="/profile.jpg"
+          alt="Profile"
+          className="quickbuy-profile-photo"
+        />
+        <span>John Doe</span>
+        <QuickbuyArrowIcon className="quickbuy-arrow-icon" />
+
+        <div className="quickbuy-dropdown">
+          <div className="quickbuy-arrow-up"></div>
+          <div className="quickbuy-dropdown-menu">
+            <Link href="/account">
+              <a>Account</a>
+            </Link>
+            <Link href="/orders">
+              <a>Orders</a>
+            </Link>
+            <Link href="/logout">
+              <a>Logout</a>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="quickbuy-right-content-mobile">
+      <div className="quickbuy-cart-container">
+        <QuickbuyCartIcon className="quickbuy-cart-icon" />
+        <div>
+          <span>3</span>
+        </div>
+      </div>
+      <div className="quickbuy-profile-container">
+        <QuickbuyProfileIcon />
+      </div>
+    </div>
+
+    <div className="quickbuy-right-menu">
+      <button className="quickbuy-menu-toggle" onClick={toggleMenu}>
+        <QuickbuyProfileIcon />
+      </button>
+      {showMenu && (
+        <>
+          <div className="quickbuy-menu-content">
+            <Link href="/account">
+              <a>Account</a>
+            </Link>
+            <Link href="/orders">
+              <a>Orders</a>
+            </Link>
+            <Link href="/logout">
+              <a>Logout</a>
+            </Link>
+          </div>
+          <div className="quickbuy-background" onClick={toggleMenu}></div>
+        </>
+      )}
+    </div>
+  </div>
+</header>
+
+);
+};
