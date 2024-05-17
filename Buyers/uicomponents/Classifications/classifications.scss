@@ -1,0 +1,98 @@
+@import "../../styles/breakpoints.scss";
+.quickbuy-sidebar-container {
+display: flex;
+height: 100%;
+font-size: 16px;
+font-weight: 600;
+background-color: white;
+flex-direction: column;
+margin-bottom: 22px;
+@include md {
+width: 280px;
+margin-bottom: 0px;
+}
+.quickbuy-sidebar-title {
+font-size: 32px;
+margin: 0;
+@include md {
+  margin-bottom: 14px;
+}
+
+}
+.quickbuy-sidebar-categories {
+list-style: none;
+padding: 0;
+display: flex;
+overflow-x: auto;
+&::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+@include md {
+  display: list-item;
+}
+
+.quickbuy-sidebar-category-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include md {
+    min-width: auto;
+    flex-direction: row;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 110px;
+    width: 100%;
+
+    @include md {
+      min-width: auto;
+      flex-direction: row;
+    }
+  }
+
+  .quickbuy-sidebar-emoji {
+    font-weight: 400;
+    font-family: apple color emoji, segoe ui emoji, noto color emoji,
+      android emoji, emojisymbols, emojione mozilla, twemoji mozilla,
+      segoe ui symbol;
+    font-size: 22px;
+    margin-bottom: 6px;
+
+    @include md {
+      margin-right: 16px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+}
+.quickbuy-sidebar-help-container {
+display: none;
+align-items: center;
+position: fixed;
+bottom: 35px;
+margin-left: -12px;
+z-index: -1;
+@include md {
+  display: flex;
+}
+
+.quickbuy-sidebar-help-icon {
+  padding: 18px;
+  background-color: #f6f7f9;
+  display: flex;
+  border-radius: 100%;
+  margin-right: 12px;
+  transform: scaleX(-1);
+}
+
+}
+}
