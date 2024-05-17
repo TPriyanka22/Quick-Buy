@@ -1,0 +1,51 @@
+.quickbuyAddressCard {
+  width: 300px;
+  padding: 24px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  hr {
+  color: #f6f6f655;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  width: 100%;
+  }
+  .quickbuyCardHeader {
+  display: flex;
+  h4 {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  
+  }
+  .quickbuyAddressDetails {
+  font-size: 18px;
+  }
+  .quickbuyActionButtons {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  margin-top: auto;
+  button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 18px;
+    margin-top: 14px;
+    cursor: pointer;
+  }
+  .quickbuyDeleteButton {
+    color: red;
+    margin-right: auto;
+  }
+  .quickbuyUpdateButton {
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  }
+  }
