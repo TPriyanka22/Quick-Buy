@@ -1,0 +1,71 @@
+@import "../../styles/breakpoints.scss";
+.quickbuy-container {
+width: 100%;
+padding: 22px;
+border: 1px solid #eee;
+border-radius: 18px;
+display: flex;
+align-items: center;
+margin-bottom: 22px;
+flex-direction: column;
+@include md {
+flex-direction: row;
+}
+img {
+width: 110px;
+min-width: 110px;
+margin-right: 22px;
+}
+.quickbuy-text-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+@include md {
+  margin-right: 55px;
+}
+
+h4 {
+  margin-top: 12;
+
+  @include md {
+    margin-top: 0;
+  }
+}
+
+}
+.quickbuy-price {
+margin-top: 22px;
+margin-bottom: 22px;
+font-weight: bold;
+font-size: 26px;
+@include md {
+  margin-left: auto;
+  font-size: 20px;
+}
+
+}
+.quickbuy-buttons {
+display: flex;
+align-items: center;
+@include md {
+  margin-left: 44px;
+}
+
+button {
+  background-color: #f6f6f6;
+  border: 2px solid #eee;
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+span {
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+}
+}
